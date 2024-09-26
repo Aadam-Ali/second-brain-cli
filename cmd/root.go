@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/aadam-ali/second-brain-cli/config"
 	"github.com/spf13/cobra"
 )
 
@@ -16,6 +17,11 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
+	config := config.GetConfig()
+
+	CreateDirectoryIfNotExists(config.Root)
+	CreateDirectoryIfNotExists(config.Inbox)
+
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)

@@ -6,11 +6,27 @@ Over the past few months I've been using Vim to write my notes and using Obsidia
 
 ## Installation
 
-COMING SOON
+To install `sb` use the provided install script:
+
+```bash
+git clone git@github.com:Aadam-Ali/second-brain-cli
+cd second-brain-cli
+./install.sh
+```
 
 ## Usage
 
-COMING SOON
+Usage information can be found by running the following commands:
+
+```bash
+# This will output a list of all available commands
+sb help
+
+# These will output usage information for the specified command
+sb help [command]
+sb [command] --help
+sb [command] help # Avoid using for commands that have args
+```
 
 ## Contributing
 

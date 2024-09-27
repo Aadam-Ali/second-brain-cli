@@ -26,7 +26,9 @@ var linkCmd = &cobra.Command{
 
 		idx, _ := fuzzyfinder.Find(files, func(i int) string { return files[i] })
 
-		fmt.Printf(" [[%s]]", strings.Trim(files[idx], ".md"))
+		filenameWithoutExt, _ := strings.CutSuffix(files[idx], ".md")
+
+		fmt.Printf(" [[%s]]", filenameWithoutExt)
 	},
 }
 

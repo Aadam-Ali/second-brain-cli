@@ -12,7 +12,7 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@a22cf08638b34d5badda920f9daf6e72c477b07b
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT_TOKEN }}
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:

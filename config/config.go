@@ -6,9 +6,12 @@ import (
 )
 
 type Configuration struct {
-	Root  string
-	Inbox string
+	Root    string
+	Inbox   string
+	Version string
 }
+
+var version string
 
 func GetConfig() Configuration {
 	homeDir, _ := os.UserHomeDir()
@@ -17,8 +20,9 @@ func GetConfig() Configuration {
 	inbox := fmt.Sprintf("%s/inbox", root)
 
 	return Configuration{
-		Root:  root,
-		Inbox: inbox,
+		Root:    root,
+		Inbox:   inbox,
+		Version: version,
 	}
 }
 

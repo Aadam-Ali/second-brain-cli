@@ -25,5 +25,5 @@ jobs:
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         goversion: "https://go.dev/dl/go1.23.1.linux-amd64.tar.gz"
+        build_flags: '-ldflags "-X github.com/aadam-ali/second-brain-cli/config.version=${{ github.ref_name }}"'
         binary_name: "sb"
-        extra_files: LICENSE README.md

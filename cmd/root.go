@@ -12,7 +12,11 @@ var rootCmd = &cobra.Command{
 	Use:   "sb",
 	Short: "sb is second brain management tool",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello! Welcome to sb.")
+		err := cmd.Help()
+
+		if err != nil {
+			panic(err)
+		}
 	},
 }
 

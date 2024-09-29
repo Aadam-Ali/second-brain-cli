@@ -4,4 +4,4 @@
 
 go get .
 
-go build -o "${HOME}/.local/bin/sb" main.go
+go build -o "${HOME}/.local/bin/sb" -ldflags "-X github.com/aadam-ali/second-brain-cli/config.version=$(git rev-parse --short HEAD)" main.go
